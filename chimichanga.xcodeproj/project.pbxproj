@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B796901D1D88836800685E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796901C1D88836800685E19 /* AppDelegate.swift */; };
+		B796901F1D88836800685E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796901E1D88836800685E19 /* ViewController.swift */; };
+		B79690221D88836800685E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79690201D88836800685E19 /* Main.storyboard */; };
+		B79690241D88836800685E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79690231D88836800685E19 /* Assets.xcassets */; };
+		B79690271D88836800685E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79690251D88836800685E19 /* LaunchScreen.storyboard */; };
+		B79690321D88836800685E19 /* chimichangaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79690311D88836800685E19 /* chimichangaTests.swift */; };
+		B796903D1D88836800685E19 /* chimichangaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796903C1D88836800685E19 /* chimichangaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B796902E1D88836800685E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B79690111D88836800685E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B79690181D88836800685E19;
+			remoteInfo = chimichanga;
+		};
+		B79690391D88836800685E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B79690111D88836800685E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B79690181D88836800685E19;
+			remoteInfo = chimichanga;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B79690191D88836800685E19 /* chimichanga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimichanga.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B796901C1D88836800685E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B796901E1D88836800685E19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B79690211D88836800685E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B79690231D88836800685E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B79690261D88836800685E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B79690281D88836800685E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B796902D1D88836800685E19 /* chimichangaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chimichangaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79690311D88836800685E19 /* chimichangaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chimichangaTests.swift; sourceTree = "<group>"; };
+		B79690331D88836800685E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B79690381D88836800685E19 /* chimichangaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chimichangaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B796903C1D88836800685E19 /* chimichangaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chimichangaUITests.swift; sourceTree = "<group>"; };
+		B796903E1D88836800685E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B79690161D88836800685E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B796902A1D88836800685E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B79690351D88836800685E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B79690101D88836800685E19 = {
+			isa = PBXGroup;
+			children = (
+				B796901B1D88836800685E19 /* chimichanga */,
+				B79690301D88836800685E19 /* chimichangaTests */,
+				B796903B1D88836800685E19 /* chimichangaUITests */,
+				B796901A1D88836800685E19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B796901A1D88836800685E19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B79690191D88836800685E19 /* chimichanga.app */,
+				B796902D1D88836800685E19 /* chimichangaTests.xctest */,
+				B79690381D88836800685E19 /* chimichangaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B796901B1D88836800685E19 /* chimichanga */ = {
+			isa = PBXGroup;
+			children = (
+				B796901C1D88836800685E19 /* AppDelegate.swift */,
+				B796901E1D88836800685E19 /* ViewController.swift */,
+				B79690201D88836800685E19 /* Main.storyboard */,
+				B79690231D88836800685E19 /* Assets.xcassets */,
+				B79690251D88836800685E19 /* LaunchScreen.storyboard */,
+				B79690281D88836800685E19 /* Info.plist */,
+			);
+			path = chimichanga;
+			sourceTree = "<group>";
+		};
+		B79690301D88836800685E19 /* chimichangaTests */ = {
+			isa = PBXGroup;
+			children = (
+				B79690311D88836800685E19 /* chimichangaTests.swift */,
+				B79690331D88836800685E19 /* Info.plist */,
+			);
+			path = chimichangaTests;
+			sourceTree = "<group>";
+		};
+		B796903B1D88836800685E19 /* chimichangaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B796903C1D88836800685E19 /* chimichangaUITests.swift */,
+				B796903E1D88836800685E19 /* Info.plist */,
+			);
+			path = chimichangaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B79690181D88836800685E19 /* chimichanga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B79690411D88836800685E19 /* Build configuration list for PBXNativeTarget "chimichanga" */;
+			buildPhases = (
+				B79690151D88836800685E19 /* Sources */,
+				B79690161D88836800685E19 /* Frameworks */,
+				B79690171D88836800685E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chimichanga;
+			productName = chimichanga;
+			productReference = B79690191D88836800685E19 /* chimichanga.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B796902C1D88836800685E19 /* chimichangaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B79690441D88836800685E19 /* Build configuration list for PBXNativeTarget "chimichangaTests" */;
+			buildPhases = (
+				B79690291D88836800685E19 /* Sources */,
+				B796902A1D88836800685E19 /* Frameworks */,
+				B796902B1D88836800685E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B796902F1D88836800685E19 /* PBXTargetDependency */,
+			);
+			name = chimichangaTests;
+			productName = chimichangaTests;
+			productReference = B796902D1D88836800685E19 /* chimichangaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B79690371D88836800685E19 /* chimichangaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B79690471D88836800685E19 /* Build configuration list for PBXNativeTarget "chimichangaUITests" */;
+			buildPhases = (
+				B79690341D88836800685E19 /* Sources */,
+				B79690351D88836800685E19 /* Frameworks */,
+				B79690361D88836800685E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B796903A1D88836800685E19 /* PBXTargetDependency */,
+			);
+			name = chimichangaUITests;
+			productName = chimichangaUITests;
+			productReference = B79690381D88836800685E19 /* chimichangaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B79690111D88836800685E19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = welbornio;
+				TargetAttributes = {
+					B79690181D88836800685E19 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					B796902C1D88836800685E19 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B79690181D88836800685E19;
+					};
+					B79690371D88836800685E19 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B79690181D88836800685E19;
+					};
+				};
+			};
+			buildConfigurationList = B79690141D88836800685E19 /* Build configuration list for PBXProject "chimichanga" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B79690101D88836800685E19;
+			productRefGroup = B796901A1D88836800685E19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B79690181D88836800685E19 /* chimichanga */,
+				B796902C1D88836800685E19 /* chimichangaTests */,
+				B79690371D88836800685E19 /* chimichangaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B79690171D88836800685E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B79690271D88836800685E19 /* LaunchScreen.storyboard in Resources */,
+				B79690241D88836800685E19 /* Assets.xcassets in Resources */,
+				B79690221D88836800685E19 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B796902B1D88836800685E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B79690361D88836800685E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B79690151D88836800685E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B796901F1D88836800685E19 /* ViewController.swift in Sources */,
+				B796901D1D88836800685E19 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B79690291D88836800685E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B79690321D88836800685E19 /* chimichangaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B79690341D88836800685E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B796903D1D88836800685E19 /* chimichangaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B796902F1D88836800685E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B79690181D88836800685E19 /* chimichanga */;
+			targetProxy = B796902E1D88836800685E19 /* PBXContainerItemProxy */;
+		};
+		B796903A1D88836800685E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B79690181D88836800685E19 /* chimichanga */;
+			targetProxy = B79690391D88836800685E19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B79690201D88836800685E19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B79690211D88836800685E19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B79690251D88836800685E19 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B79690261D88836800685E19 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B796903F1D88836800685E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B79690401D88836800685E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B79690421D88836800685E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = chimichanga/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichanga;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B79690431D88836800685E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = chimichanga/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichanga;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B79690451D88836800685E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = chimichangaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chimichanga.app/chimichanga";
+			};
+			name = Debug;
+		};
+		B79690461D88836800685E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = chimichangaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chimichanga.app/chimichanga";
+			};
+			name = Release;
+		};
+		B79690481D88836800685E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = chimichangaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = chimichanga;
+			};
+			name = Debug;
+		};
+		B79690491D88836800685E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = chimichangaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = chimichanga;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B79690141D88836800685E19 /* Build configuration list for PBXProject "chimichanga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B796903F1D88836800685E19 /* Debug */,
+				B79690401D88836800685E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B79690411D88836800685E19 /* Build configuration list for PBXNativeTarget "chimichanga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B79690421D88836800685E19 /* Debug */,
+				B79690431D88836800685E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B79690441D88836800685E19 /* Build configuration list for PBXNativeTarget "chimichangaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B79690451D88836800685E19 /* Debug */,
+				B79690461D88836800685E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B79690471D88836800685E19 /* Build configuration list for PBXNativeTarget "chimichangaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B79690481D88836800685E19 /* Debug */,
+				B79690491D88836800685E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B79690111D88836800685E19 /* Project object */;
+}
