@@ -74,10 +74,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
      * Click handler for add new city button
      */
     func newButtonPressed() -> Void {
-        self.locationList.addNewLocation(textField.text!, { list in
-            self.textField.text = ""
-            self.tableView.reloadData()
-        })
+        let text = textField.text!.trimmingCharacters(in: CharacterSet.whitespaces)
+
+        if text.characters.count > 0 {
+            self.locationList.addNewLocation(text, { list in
+                self.textField.text = ""
+                self.tableView.reloadData()
+            })
+        }
     }
     
     /**
