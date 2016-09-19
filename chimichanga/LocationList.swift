@@ -51,7 +51,7 @@ class LocationList: NSObject {
             if success {
                 self.list.append(location)
             }
-            onCompleted(self.list)            
+            onCompleted(self.list)
         })
     }
     
