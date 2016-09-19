@@ -20,7 +20,7 @@ class WeatherApi {
     let HTTPService = HTTP()
     
     private init() {
-       
+        
     }
     
     /**
@@ -40,21 +40,30 @@ class WeatherApi {
                 
                 let parsedData = try JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String:Any]
                 
-                // Parse out city information
-                let mainObj = parsedData["main"] as! [String:Any]
-                let temp = mainObj["temp"] as! Float
-                let tempMin = mainObj["temp_min"] as! Float
-                let tempMax = mainObj["temp_max"] as! Float
-                let weatherObj = parsedData["weather"] as! [[String:Any]]
-                let icon = weatherObj[0]["icon"] as! String
                 
-                // Update location with new info
-                location.temperature = temp
-                location.temperatureMin = tempMin
-                location.temperatureMax = tempMax
-                location.createImage(icon, onCompleted: {
+                let cod = parsedData["cod"] as? Int
+                
+                if cod == 200 {
+                    
+                    // Parse out city information
+                    let mainObj = parsedData["main"] as! [String:Any]
+                    let temp = mainObj["temp"] as! Float
+                    let tempMin = mainObj["temp_min"] as! Float
+                    let tempMax = mainObj["temp_max"] as! Float
+                    let weatherObj = parsedData["weather"] as! [[String:Any]]
+                    let icon = weatherObj[0]["icon"] as! String
+                    
+                    // Update location with new info
+                    location.temperature = temp
+                    location.temperatureMin = tempMin
+                    location.temperatureMax = tempMax
+                    location.createImage(icon, onCompleted: {
+                        onCompleted()
+                    })
+                    
+                } else {
                     onCompleted()
-                })
+                }
                 
             } catch let error as NSError {
                 print(error)
