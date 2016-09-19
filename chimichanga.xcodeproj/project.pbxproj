@@ -17,6 +17,7 @@
 		B796904E1D88967E00685E19 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796904D1D88967E00685E19 /* WeatherApi.swift */; };
 		B79E8CB81D88AF5A00EBF872 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8CB71D88AF5A00EBF872 /* Location.swift */; };
 		B7EFEBDB1D8F5EDD00C31361 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFEBDA1D8F5EDD00C31361 /* DetailViewController.swift */; };
+		B7EFEBDF1D8F958A00C31361 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFEBDE1D8F958A00C31361 /* LocationList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B796904D1D88967E00685E19 /* WeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		B79E8CB71D88AF5A00EBF872 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B7EFEBDA1D8F5EDD00C31361 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B7EFEBDE1D8F958A00C31361 /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B79E8CB71D88AF5A00EBF872 /* Location.swift */,
+				B7EFEBDE1D8F958A00C31361 /* LocationList.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				B796901D1D88836800685E19 /* AppDelegate.swift in Sources */,
 				B78DA7761D8F565A00C290D0 /* HTTP.swift in Sources */,
+				B7EFEBDF1D8F958A00C31361 /* LocationList.swift in Sources */,
 				B796904B1D888A9700685E19 /* MainViewController.swift in Sources */,
 				B796904E1D88967E00685E19 /* WeatherApi.swift in Sources */,
 				B79E8CB81D88AF5A00EBF872 /* Location.swift in Sources */,

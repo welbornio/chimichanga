@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class WeatherApi: NSObject {
+class WeatherApi {
+    
+    static let sharedInstance = WeatherApi()
     
     var locationList = [Location]()
     
@@ -17,35 +19,8 @@ class WeatherApi: NSObject {
     
     let HTTPService = HTTP()
     
-    override init() {
-        self.locationList.append(Location("San Francisco"))
-        self.locationList.append(Location("New York"))
-        self.locationList.append(Location("Salt Lake City"))
-        super.init()
-    }
-    
-    /**
-     * Get populated list of static cities and the related data
-     * @param onCompletion {func} Callback function
-     * @returns {Void}
-     */
-    func getPopulatedList(_ onCompletion: @escaping ([Location]) -> Void) {
-        
-        let callGroup = DispatchGroup.init()
-        
-        locationList.forEach {
-            (location: Location) -> Void in
-            
-            callGroup.enter()
-            
-            loadLocation(location, {
-                callGroup.leave()
-            })
-        }
-        
-        callGroup.notify(queue: DispatchQueue.main) {
-            onCompletion(self.locationList)
-        }
+    private init() {
+       
     }
     
     /**
@@ -60,7 +35,7 @@ class WeatherApi: NSObject {
         
         let route = "\(currentWeatherURL)?units=Imperial&q=\(escapedLocation)&APPID=\(Constants.weatherAPIKey)"
         
-        HTTPService.performGET(path: route, onCompletion: { json in
+        HTTPService.performGET(path: route, onCompleted: { json in
             do {
                 
                 let parsedData = try JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String:Any]
@@ -77,7 +52,7 @@ class WeatherApi: NSObject {
                 location.temperature = temp
                 location.temperatureMin = tempMin
                 location.temperatureMax = tempMax
-                location.createImage(icon, onCompletion: {
+                location.createImage(icon, onCompleted: {
                     onCompleted()
                 })
                 

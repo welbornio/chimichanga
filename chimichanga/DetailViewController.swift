@@ -11,15 +11,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    let weatherApi = WeatherApi()
-    
     var location :Location
+    var locationList :LocationList
     
     /**
      * Initializer for DetailViewController
      */
-    init(_ location: Location) {
+    init(_ location: Location, _ locationList: LocationList) {
         self.location = location
+        self.locationList = locationList
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -41,6 +41,7 @@ class DetailViewController: UIViewController {
         renderCurrentTemperature()
         renderHighTemperature()
         renderLowTemperature()
+        renderRemoveButton()
     }
     
     func renderCityName() -> Void {
@@ -83,4 +84,22 @@ class DetailViewController: UIViewController {
         self.view.addSubview(textView)
     }
     
+    func renderRemoveButton() -> Void {
+        let button: UIButton = UIButton(frame: CGRect(x: 0, y: 160, width: 150, height: 40))
+        button.backgroundColor = UIColor.red
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitle("Remove Location", for: .normal)
+        button.addTarget(self, action: #selector(DetailViewController.removeButtonPressed), for: .touchUpInside)
+        
+        self.view.addSubview(button)
+    }
+    
+    /**
+     * Remove button click handler
+     */
+    func removeButtonPressed() {
+        self.locationList.removeLocation(self.location, {
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
 }
