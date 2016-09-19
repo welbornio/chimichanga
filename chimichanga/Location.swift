@@ -7,21 +7,42 @@
 //
 
 import Foundation
+import UIKit
 
-struct Location {
+class Location: NSObject {
     var city: String
     var temperature: Float?
-    var icon: String?
+    var temperatureMin: Float?
+    var temperatureMax: Float?
+    var icon: URL?
+    var image: UIImage?
     
-    init(city: String) {
+    let HTTPService = HTTP()
+    
+    /**
+     * Location constructor
+     */
+    init(_ city: String) {
         self.city = city
     }
     
-    mutating func setTemperature (temperature: Float) {
-        self.temperature = temperature
-    }
-    
-    mutating func setIcon (icon: String) {
-        self.icon = icon
+    /**
+     * Set the icon path, and create an image for this location
+     * @param icon {String} Icon ID
+     * @returns Void
+     */
+    func createImage(_ icon: String, onCompletion: @escaping() -> Void ) -> Void {
+        self.icon = URL(string: "http://openweathermap.org/img/w/\(icon).png")
+        
+        HTTPService.loadUrl(url: self.icon!, onCompletion: { (data, response, error) in
+            DispatchQueue.main.sync() { () -> Void in
+                if error != nil {
+                    print(error)
+                } else {
+                    self.image = UIImage(data: data!)
+                    onCompletion()
+                }
+            }
+        })
     }
 }

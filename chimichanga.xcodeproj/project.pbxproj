@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B77A989D1D889CEB002A9542 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A989C1D889CEB002A9542 /* Constants.swift */; };
-		B77A98A01D88A0F0002A9542 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A989F1D88A0F0002A9542 /* SwiftyJSON.swift */; };
+		B78DA7761D8F565A00C290D0 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78DA7751D8F565A00C290D0 /* HTTP.swift */; };
 		B796901D1D88836800685E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796901C1D88836800685E19 /* AppDelegate.swift */; };
 		B79690241D88836800685E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79690231D88836800685E19 /* Assets.xcassets */; };
-		B79690271D88836800685E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79690251D88836800685E19 /* LaunchScreen.storyboard */; };
 		B79690321D88836800685E19 /* chimichangaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79690311D88836800685E19 /* chimichangaTests.swift */; };
 		B796903D1D88836800685E19 /* chimichangaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796903C1D88836800685E19 /* chimichangaUITests.swift */; };
 		B796904B1D888A9700685E19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796904A1D888A9700685E19 /* MainViewController.swift */; };
 		B796904E1D88967E00685E19 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796904D1D88967E00685E19 /* WeatherApi.swift */; };
 		B79E8CB81D88AF5A00EBF872 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E8CB71D88AF5A00EBF872 /* Location.swift */; };
+		B7EFEBDB1D8F5EDD00C31361 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFEBDA1D8F5EDD00C31361 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +38,10 @@
 
 /* Begin PBXFileReference section */
 		B77A989C1D889CEB002A9542 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B77A989F1D88A0F0002A9542 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		B78DA7751D8F565A00C290D0 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		B79690191D88836800685E19 /* chimichanga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimichanga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796901C1D88836800685E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79690231D88836800685E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B79690261D88836800685E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79690281D88836800685E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B796902D1D88836800685E19 /* chimichangaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chimichangaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79690311D88836800685E19 /* chimichangaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chimichangaTests.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		B796904A1D888A9700685E19 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B796904D1D88967E00685E19 /* WeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		B79E8CB71D88AF5A00EBF872 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B7EFEBDA1D8F5EDD00C31361 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,14 +88,6 @@
 			name = constants;
 			sourceTree = "<group>";
 		};
-		B77A989E1D88A0E5002A9542 /* vendor */ = {
-			isa = PBXGroup;
-			children = (
-				B77A989F1D88A0F0002A9542 /* SwiftyJSON.swift */,
-			);
-			name = vendor;
-			sourceTree = "<group>";
-		};
 		B79690101D88836800685E19 = {
 			isa = PBXGroup;
 			children = (
@@ -120,13 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				B79E8CB61D88AF4D00EBF872 /* classes */,
-				B77A989E1D88A0E5002A9542 /* vendor */,
 				B77A989B1D889CDF002A9542 /* constants */,
 				B796904C1D88966100685E19 /* services */,
 				B796901C1D88836800685E19 /* AppDelegate.swift */,
+				B7EFEBDA1D8F5EDD00C31361 /* DetailViewController.swift */,
 				B796904A1D888A9700685E19 /* MainViewController.swift */,
 				B79690231D88836800685E19 /* Assets.xcassets */,
-				B79690251D88836800685E19 /* LaunchScreen.storyboard */,
 				B79690281D88836800685E19 /* Info.plist */,
 			);
 			path = chimichanga;
@@ -154,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B796904D1D88967E00685E19 /* WeatherApi.swift */,
+				B78DA7751D8F565A00C290D0 /* HTTP.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -234,13 +226,16 @@
 				TargetAttributes = {
 					B79690181D88836800685E19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					B796902C1D88836800685E19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = B79690181D88836800685E19;
 					};
 					B79690371D88836800685E19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = B79690181D88836800685E19;
 					};
 				};
@@ -270,7 +265,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B79690271D88836800685E19 /* LaunchScreen.storyboard in Resources */,
 				B79690241D88836800685E19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,11 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B796901D1D88836800685E19 /* AppDelegate.swift in Sources */,
+				B78DA7761D8F565A00C290D0 /* HTTP.swift in Sources */,
 				B796904B1D888A9700685E19 /* MainViewController.swift in Sources */,
 				B796904E1D88967E00685E19 /* WeatherApi.swift in Sources */,
-				B77A98A01D88A0F0002A9542 /* SwiftyJSON.swift in Sources */,
 				B79E8CB81D88AF5A00EBF872 /* Location.swift in Sources */,
 				B77A989D1D889CEB002A9542 /* Constants.swift in Sources */,
+				B7EFEBDB1D8F5EDD00C31361 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,17 +330,6 @@
 			targetProxy = B79690391D88836800685E19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B79690251D88836800685E19 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B79690261D88836800685E19 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B796903F1D88836800685E19 /* Debug */ = {
@@ -441,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichanga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -452,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichanga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -463,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chimichanga.app/chimichanga";
 			};
 			name = Debug;
@@ -475,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chimichanga.app/chimichanga";
 			};
 			name = Release;
@@ -486,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = chimichanga;
 			};
 			name = Debug;
@@ -497,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = welbornio.chimichangaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = chimichanga;
 			};
 			name = Release;

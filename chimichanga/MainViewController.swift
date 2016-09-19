@@ -8,38 +8,65 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(textField)
-        view.addSubview(addCityBtn)
-    }
-    
-    func buttonPressed() {
-        weatherApi.getPopulatedList { list in
-            print(list)
-        }
-    }
+    var tableView: UITableView = UITableView()
     
     let weatherApi = WeatherApi()
     
-    lazy var textField: UITextField! = {
-        let view = UITextField()
-        view.frame = CGRectMake(50, 70, 200, 30)
-        view.backgroundColor = UIColor.grayColor()
-        return view
-    }()
+    var locationList = [Location]()
     
-    lazy var addCityBtn: UIButton! = {
-        let view = UIButton()
-        view.addTarget(self, action: #selector(MainViewController.buttonPressed), forControlEvents: .TouchDown)
-        view.setTitle("Add City", forState: .Normal)
-        view.backgroundColor = UIColor.blueColor()
-        view.frame = CGRectMake(100, 100, 100, 50)
-        view.setTitle("Button", forState: UIControlState.Normal)
+    /**
+     * Post view load
+     */
+    override func viewDidLoad() -> Void {
+        super.viewDidLoad()
         
-        return view
-    }()
+        tableView.frame.size.width = self.view.frame.size.width
+        tableView.frame.size.height = self.view.frame.size.height
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.layoutMargins = UIEdgeInsets.zero
+        self.view.addSubview(tableView)
+        
+        weatherApi.getPopulatedList { list in
+            self.locationList = list
+            self.tableView.reloadData()
+        }
+    }
+    
+    /**
+     * Implement tableView numberOfRowsInSection
+     */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.locationList.count
+    }
+    
+    /**
+     * Implement tableView cellForRow
+     */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        
+        let location = self.locationList[indexPath.row]
+        
+        cell.imageView!.image = location.image
+        cell.textLabel?.text = "\(location.city) \(location.temperature!)\u{00B0}"
+        
+        return cell
+    }
+    
+    /**
+     * Implement tableView didSelectRow
+     */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let location = self.locationList[indexPath.row]
+        weatherApi.loadLocation(location, {
+            self.tableView.reloadData()
+            let detailViewController:DetailViewController = DetailViewController(location)
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        })
+    }
     
 }
