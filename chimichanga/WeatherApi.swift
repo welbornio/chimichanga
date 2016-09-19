@@ -13,8 +13,6 @@ class WeatherApi {
     
     static let sharedInstance = WeatherApi()
     
-    var locationList = [Location]()
-    
     let currentWeatherURL = "http://api.openweathermap.org/data/2.5/weather"
     
     let HTTPService = HTTP()
