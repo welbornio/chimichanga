@@ -33,6 +33,7 @@ class HTTP: NSObject {
     func performGET(path: String, onCompleted: @escaping (_ data: Data) -> Void) {
         let url = URL(string: path)
         
+        
         let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
             if error != nil {
                 print(error)
@@ -41,7 +42,9 @@ class HTTP: NSObject {
             }
         }
         
+        
         task.resume()
+        
     }
     
 }

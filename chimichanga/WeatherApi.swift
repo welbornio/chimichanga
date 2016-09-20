@@ -13,8 +13,6 @@ class WeatherApi {
     
     static let sharedInstance = WeatherApi()
     
-    var locationList = [Location]()
-    
     let currentWeatherURL = "http://api.openweathermap.org/data/2.5/weather"
     
     let HTTPService = HTTP()
@@ -29,7 +27,7 @@ class WeatherApi {
      * @param onCompleted {func} Callback function
      * @returns {Void}
      */
-    func loadLocation(_ location: Location, _ onCompleted: @escaping() -> Void) -> Void {
+    func loadLocation(_ location: Location, _ onCompleted: @escaping(Bool) -> Void) -> Void {
         
         let escapedLocation = location.city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         
@@ -58,15 +56,17 @@ class WeatherApi {
                     location.temperatureMin = tempMin
                     location.temperatureMax = tempMax
                     location.createImage(icon, onCompleted: {
-                        onCompleted()
+                        onCompleted(true)
                     })
                     
                 } else {
-                    onCompleted()
+                    OperationQueue.main.addOperation {
+                        onCompleted(false)
+                    }
                 }
                 
-            } catch let error as NSError {
-                print(error)
+            } catch {
+                print("An Error Occurred")
             }
         })
     }

@@ -28,7 +28,7 @@ class LocationList: NSObject {
             
             let location = Location(city)
             
-            WeatherApi.sharedInstance.loadLocation(location, {
+            WeatherApi.sharedInstance.loadLocation(location, {_ in 
                 self.list.append(location)
                 callGroup.leave()
             })
@@ -47,8 +47,10 @@ class LocationList: NSObject {
      */
     func addNewLocation(_ city: String, _ onCompleted: @escaping([Location]) -> Void) -> Void {
         let location = Location(city)
-        WeatherApi.sharedInstance.loadLocation(location, {
-            self.list.append(location)
+        WeatherApi.sharedInstance.loadLocation(location, { success in
+            if success {
+                self.list.append(location)
+            }
             onCompleted(self.list)
         })
     }
@@ -75,7 +77,7 @@ class LocationList: NSObject {
      * @returns {Void}
      */
     func viewLocation(_ location: Location, _ onCompleted: @escaping() -> Void) -> Void {
-        WeatherApi.sharedInstance.loadLocation(location, {
+        WeatherApi.sharedInstance.loadLocation(location, { _ in
             onCompleted()
         })
     }
