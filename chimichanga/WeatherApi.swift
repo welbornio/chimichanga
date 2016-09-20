@@ -15,6 +15,8 @@ class WeatherApi {
     
     let currentWeatherURL = "http://api.openweathermap.org/data/2.5/weather"
     
+    let forecastWeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily"
+    
     let HTTPService = HTTP()
     
     private init() {
@@ -46,15 +48,11 @@ class WeatherApi {
                     // Parse out city information
                     let mainObj = parsedData["main"] as! [String:Any]
                     let temp = mainObj["temp"] as! Float
-                    let tempMin = mainObj["temp_min"] as! Float
-                    let tempMax = mainObj["temp_max"] as! Float
                     let weatherObj = parsedData["weather"] as! [[String:Any]]
                     let icon = weatherObj[0]["icon"] as! String
                     
                     // Update location with new info
                     location.temperature = temp
-                    location.temperatureMin = tempMin
-                    location.temperatureMax = tempMax
                     location.createImage(icon, onCompleted: {
                         onCompleted(true)
                     })
@@ -71,46 +69,49 @@ class WeatherApi {
         })
     }
     
+    /**
+     * Load the forecast for this location
+     * @param location {Location} Location we are querying for
+     * @param onCompleted {func} Callback function
+     * @returns {Void}
+     */
     func loadForecast(_ location: Location, _ onCompleted: @escaping() -> Void) -> Void {
         let escapedLocation = location.city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         
-        let route = "\(currentWeatherURL)?units=Imperial&q=\(escapedLocation)&APPID=\(Constants.weatherAPIKey)"
+        let route = "\(forecastWeatherURL)?q=\(escapedLocation)&cnt=1&units=imperial&appid=\(Constants.weatherAPIKey)"
         
         HTTPService.performGET(path: route, onCompleted: { json in
             do {
                 
                 let parsedData = try JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String:Any]
                 
+                let cod = parsedData["cod"] as? String
                 
-                let cod = parsedData["cod"] as? Int
-                
-                if cod == 200 {
+                if cod == "200" {
                     
                     // Parse out city information
-                    let mainObj = parsedData["main"] as! [String:Any]
-                    let temp = mainObj["temp"] as! Float
-                    let tempMin = mainObj["temp_min"] as! Float
-                    let tempMax = mainObj["temp_max"] as! Float
-                    let weatherObj = parsedData["weather"] as! [[String:Any]]
-                    let icon = weatherObj[0]["icon"] as! String
+                    let listObj = parsedData["list"] as! [[String:Any]]
+                    let temp = listObj[0]["temp"] as! [String:Any]
+                    let minTemp = temp["min"] as! Float
+                    let maxTemp = temp["max"] as! Float
                     
                     // Update location with new info
-                    location.temperature = temp
-                    location.temperatureMin = tempMin
-                    location.temperatureMax = tempMax
-                    location.createImage(icon, onCompleted: {
-                        onCompleted()
-                    })
+                    location.temperatureMin = minTemp
+                    location.temperatureMax = maxTemp
+                    
+                    onCompleted()
                     
                 } else {
-                    onCompleted()
+                    OperationQueue.main.addOperation {
+                        onCompleted()
+                    }
                 }
                 
             } catch let error as NSError {
                 print(error)
             }
         })
-
+        
     }
     
 }

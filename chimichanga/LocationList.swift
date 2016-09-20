@@ -77,8 +77,20 @@ class LocationList: NSObject {
      * @returns {Void}
      */
     func viewLocation(_ location: Location, _ onCompleted: @escaping() -> Void) -> Void {
-        WeatherApi.sharedInstance.loadLocation(location, { _ in
-            onCompleted()
+        let callGroup = DispatchGroup()
+        
+        callGroup.enter()
+        WeatherApi.sharedInstance.loadForecast(location, { _ in
+            callGroup.leave()
         })
+        
+        callGroup.enter()
+        WeatherApi.sharedInstance.loadLocation(location, { _ in
+            callGroup.leave()
+        })
+        
+        callGroup.notify(queue: DispatchQueue.main) {
+            onCompleted()
+        }
     }
 }
